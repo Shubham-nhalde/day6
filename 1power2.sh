@@ -1,15 +1,9 @@
-#!/bin/bash -x
+#!/bin/bash
 
-read -p "enter a number : " n
+read -p  "Enter any power of 2 (in number) : " n
 
-a=1
-
-	for ((count=1; count<=$n; count++))
-do
-
-	a=$((2**count))
-if [ $a -lt 256 ]
-	then
-echo $a
-	fi
-done
+for((count=0; count<=$n; count++))
+  do
+      a=$((2**$count))
+      echo $a
+  done
